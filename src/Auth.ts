@@ -1,6 +1,8 @@
 import { HttpClient } from 'aurelia-fetch-client';
+import jwt from 'jsonwebtoken';
 import { Constants } from './Constants';
 import { IDto } from './IDto';
+import { ITokenPayload } from './ITokenPayload';
 import { IUserProfile } from './IUserProfile';
 
 export class Auth {
@@ -22,5 +24,9 @@ export class Auth {
             let responseDto = await response.json() as IDto<IUserProfile>;
             return responseDto.data;
         }
+    }
+
+    public static getTokenPayload(token: string): ITokenPayload {
+        return jwt.decode(token) as ITokenPayload;
     }
 }

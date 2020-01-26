@@ -1,6 +1,6 @@
 {
   "name": "@sameke/authenticator-client-sdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "authenticator client sdk for connecting a web application to auth.sameke.com",
   "main": "dist/index.js",
   "scripts": {
@@ -26,11 +26,13 @@
   },
   "homepage": "https://github.com/sameke/authenticator-client-sdk#readme",
   "devDependencies": {
+    "@types/jsonwebtoken": "^8.3.7",
     "gulp": "^4.0.2",
     "gulp-bump": "^3.1.3",
     "typescript": "^3.7.5"
   },
   "dependencies": {
-    "aurelia-fetch-client": "^1.8.2"
+    "aurelia-fetch-client": "^1.8.2",
+    "jsonwebtoken": "^8.5.1"
   }
 }
