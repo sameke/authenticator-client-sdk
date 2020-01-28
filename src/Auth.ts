@@ -1,5 +1,5 @@
 import { HttpClient } from 'aurelia-fetch-client';
-import jwt from 'jsonwebtoken';
+import jwt from 'jwt-decode';
 import { Constants } from './Constants';
 import { IDto } from './IDto';
 import { ITokenPayload } from './ITokenPayload';
@@ -27,6 +27,6 @@ export class Auth {
     }
 
     public static getTokenPayload(token: string): ITokenPayload {
-        return jwt.decode(token) as ITokenPayload;
+        return jwt(token) as ITokenPayload;
     }
 }
