@@ -9,7 +9,7 @@ export class Auth {
     private static _httpClient: HttpClient = new HttpClient();
 
     public static getAuthUrl(clientId: number, responseType: 'code' | 'token', redirectUri: string, state: string): string {
-        return `${Constants.AUTH_BASE_URL}?clientId=${clientId}&response_type=${responseType}&scope=profile&redirect_uri=${redirectUri}&state=${state}`;
+        return `${Constants.AUTH_BASE_URL}?client_id=${clientId}&response_type=${responseType}&scope=profile&redirect_uri=${redirectUri}&state=${state}`;
     }
 
     public static async getUserProfile(token: string): Promise<IUserProfile> {

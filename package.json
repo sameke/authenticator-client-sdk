@@ -1,6 +1,6 @@
 {
   "name": "@sameke/authenticator-client-sdk",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "authenticator client sdk for connecting a web application to auth.sameke.com",
   "main": "dist/index.js",
   "scripts": {
